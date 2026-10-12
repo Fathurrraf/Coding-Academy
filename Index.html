@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">Coding<span>Academy</span></div>
+
+        <nav>
+            <button onclick="bukaHalaman('gallery')">Gallery</button>
+            <button onclick="bukaHalaman('pendaftaran')">Pendaftaran</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HALAMAN GALLERY -->
+        <section id="gallery" class="halaman aktif">
+            <div class="hero">
+                <p class="label">BELAJAR • BERKARYA • BERKEMBANG</p>
+                <h1>Jelajahi Kegiatan <span>Coding Academy</span></h1>
+                <p>
+                    Kenali berbagai kegiatan pelatihan pemrograman
+                    dan temukan pengalaman belajar yang menarik.
+                </p>
+            </div>
+
+            <div class="section-title">
+                <div>
+                    <h2>Gallery Kegiatan</h2>
+                    <p>Klik salah satu kegiatan untuk melihat detailnya.</p>
+                </div>
+            </div>
+
+            <div class="gallery-grid">
+                <article class="gallery-card"
+                    onclick="lihatKegiatan('Pelatihan HTML',
+                    'Peserta mempelajari dasar HTML untuk membuat struktur halaman website, seperti judul, paragraf, gambar, tautan, dan berbagai elemen lainnya.')">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80"
+                         alt="Pelatihan HTML">
+                    <div class="card-content">
+                        <span class="kategori">PEMROGRAMAN WEB</span>
+                        <h3>Pelatihan HTML</h3>
+                        <p>Belajar membuat struktur dasar halaman website.</p>
+                        <span class="detail-link">Lihat kegiatan →</span>
+                    </div>
+                </article>
+
+                <article class="gallery-card"
+                    onclick="lihatKegiatan('Pelatihan CSS',
+                    'Peserta mempelajari cara mempercantik website dengan CSS, mulai dari warna, ukuran tulisan, jarak, tata letak, hingga desain yang menarik.')">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=80"
+                         alt="Pelatihan CSS">
+                    <div class="card-content">
+                        <span class="kategori">DESAIN WEB</span>
+                        <h3>Pelatihan CSS</h3>
+                        <p>Mengatur tampilan website agar lebih menarik.</p>
+                        <span class="detail-link">Lihat kegiatan →</span>
+                    </div>
+                </article>
+
+                <article class="gallery-card"
+                    onclick="lihatKegiatan('Pelatihan JavaScript',
+                    'Peserta mempelajari dasar JavaScript untuk membuat website interaktif, seperti tombol yang merespons klik dan validasi formulir.')">
+                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=700&q=80"
+                         alt="Pelatihan JavaScript">
+                    <div class="card-content">
+                        <span class="kategori">PEMROGRAMAN</span>
+                        <h3>Pelatihan JavaScript</h3>
+                        <p>Membuat website yang dinamis dan interaktif.</p>
+                        <span class="detail-link">Lihat kegiatan →</span>
+                    </div>
+                </article>
+
+                <article class="gallery-card"
+                    onclick="lihatKegiatan('Praktik Pembuatan Website',
+                    'Peserta menerapkan materi yang sudah dipelajari untuk membuat website sederhana, mulai dari menyusun halaman sampai mengatur tampilannya.')">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=700&q=80"
+                         alt="Praktik pembuatan website">
+                    <div class="card-content">
+                        <span class="kategori">PRAKTIK</span>
+                        <h3>Praktik Pembuatan Website</h3>
+                        <p>Menerapkan materi dalam proyek website sederhana.</p>
+                        <span class="detail-link">Lihat kegiatan →</span>
+                    </div>
+                </article>
+
+                <article class="gallery-card"
+                    onclick="lihatKegiatan('Diskusi dan Kolaborasi',
+                    'Peserta bekerja sama, bertukar ide, berdiskusi, dan membantu menyelesaikan masalah pemrograman selama proses belajar.')">
+                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=700&q=80"
+                         alt="Diskusi dan kolaborasi">
+                    <div class="card-content">
+                        <span class="kategori">KOLABORASI</span>
+                        <h3>Diskusi dan Kolaborasi</h3>
+                        <p>Belajar bersama dan bertukar ide dengan peserta lain.</p>
+                        <span class="detail-link">Lihat kegiatan →</span>
+                    </div>
+                </article>
+
+                <article class="gallery-card"
+                    onclick="lihatKegiatan('Presentasi Hasil Karya',
+                    'Peserta mempresentasikan website yang telah dibuat dan menjelaskan proses pengerjaan serta fitur yang berhasil dikembangkan.')">
+                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=700&q=80"
+                         alt="Presentasi hasil karya">
+                    <div class="card-content">
+                        <span class="kategori">HASIL KARYA</span>
+                        <h3>Presentasi Hasil Karya</h3>
+                        <p>Menampilkan proyek dan menjelaskan hasil pembelajaran.</p>
+                        <span class="detail-link">Lihat kegiatan →</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- HALAMAN PENDAFTARAN -->
+        <section id="pendaftaran" class="halaman">
+            <div class="form-heading">
+                <p class="label">GABUNG BERSAMA KAMI</p>
+                <h1>Formulir <span>Pendaftaran</span></h1>
+                <p>Isi data diri dan pilih bahasa pemrograman yang ingin dipelajari.</p>
+            </div>
+
+            <form id="formPendaftaran">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nik">NIK</label>
+                        <input type="text" id="nik" name="nik"
+                               inputmode="numeric" maxlength="16"
+                               pattern="[0-9]{16}"
+                               placeholder="Masukkan 16 digit NIK" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama"
+                               placeholder="Masukkan nama lengkap" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jenisKelamin">Jenis Kelamin</label>
+                        <select id="jenisKelamin" name="jenisKelamin" required>
+                            <option value="">-- Pilih jenis kelamin --</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noHP">Nomor HP</label>
+                        <input type="tel" id="noHP" name="noHP"
+                               placeholder="Contoh: 081234567890" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="alamat">Alamat</label>
+                        <textarea id="alamat" name="alamat" rows="3"
+                                  placeholder="Masukkan alamat lengkap" required></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="bahasa">Bahasa Pemrograman yang Diminati</label>
+                        <select id="bahasa" name="bahasa" required>
+                            <option value="">-- Pilih bahasa pemrograman --</option>
+                            <option value="HTML dan CSS">HTML dan CSS</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>
+                            <option value="PHP">PHP</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Simpan Pendaftaran</button>
+            </form>
+
+            <div id="hasilPendaftaran" class="hasil" hidden>
+                <h2>Data Pendaftaran</h2>
+                <p>Berikut data yang berhasil ditampilkan:</p>
+                <div id="detailData"></div>
+                <button type="button" class="btn-reset" onclick="ulangPendaftaran()">
+                    Kembali ke Formulir
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Coding Academy | Belajar Coding dari Dasar</p>
+    </footer>
+
+    <!-- MODAL DETAIL KEGIATAN -->
+    <div id="modalKegiatan" class="modal" hidden>
+        <div class="modal-content">
+            <button class="tutup-modal" onclick="tutupKegiatan()" aria-label="Tutup">&times;</button>
+            <p class="label">CODING ACADEMY</p>
+            <h2 id="judulKegiatan"></h2>
+            <p id="deskripsiKegiatan"></p>
+            <button class="btn-modal" onclick="tutupKegiatan()">Mengerti</button>
+        </div>
+    </div>
+
+    <script>
+        function bukaHalaman(namaHalaman) {
+            document.querySelectorAll(".halaman").forEach(function(halaman) {
+                halaman.classList.remove("aktif");
+            });
+
+            document.getElementById(namaHalaman).classList.add("aktif");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function lihatKegiatan(judul, deskripsi) {
+            document.getElementById("judulKegiatan").textContent = judul;
+            document.getElementById("deskripsiKegiatan").textContent = deskripsi;
+            document.getElementById("modalKegiatan").hidden = false;
+        }
+
+        function tutupKegiatan() {
+            document.getElementById("modalKegiatan").hidden = true;
+        }
+
+        document.getElementById("modalKegiatan").addEventListener("click", function(event) {
+            if (event.target === this) {
+                tutupKegiatan();
+            }
+        });
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                tutupKegiatan();
+            }
+        });
+
+        document.getElementById("formPendaftaran").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const yakin = confirm("Apakah Anda sudah yakin untuk menyimpan?");
+
+            if (!yakin) {
+                return;
+            }
+
+            const data = [
+                ["NIK", document.getElementById("nik").value],
+                ["Nama Lengkap", document.getElementById("nama").value],
+                ["Jenis Kelamin", document.getElementById("jenisKelamin").value],
+                ["Nomor HP", document.getElementById("noHP").value],
+                ["Alamat", document.getElementById("alamat").value],
+                ["Bahasa yang Diminati", document.getElementById("bahasa").value]
+            ];
+
+            const detailData = document.getElementById("detailData");
+            detailData.replaceChildren();
+
+            data.forEach(function(item) {
+                const baris = document.createElement("div");
+                baris.className = "data-row";
+
+                const label = document.createElement("strong");
+                label.textContent = item[0];
+
+                const nilai = document.createElement("span");
+                nilai.textContent = item[1];
+
+                baris.append(label, nilai);
+                detailData.appendChild(baris);
+            });
+
+            document.getElementById("hasilPendaftaran").hidden = false;
+            document.getElementById("formPendaftaran").hidden = true;
+            document.getElementById("hasilPendaftaran").scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        });
+
+        function ulangPendaftaran() {
+            document.getElementById("formPendaftaran").reset();
+            document.getElementById("formPendaftaran").hidden = false;
+            document.getElementById("hasilPendaftaran").hidden = true;
+            document.getElementById("pendaftaran").scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    </script>
+
+</body>
+</html>
